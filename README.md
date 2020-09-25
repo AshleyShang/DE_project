@@ -4,7 +4,6 @@
 
 1. [docker](https://docs.docker.com/get-docker/) (also make sure you have `docker-compose`) we will use this to run Airflow locally
 2. [pgcli](https://github.com/dbcli/pgcli) to connect to our databases(postgres and Redshift)
-3. [AWS Components]
 
 
 1. `aws cli` configured with keys and region
@@ -63,6 +62,10 @@ Get your EMR ID from the EMR UI, then in `dags/user_behaviour.py` fill out your 
 
 switch on your `DAG`, after running successfully, verify the presence of data in redshift using
 `select * from  public.user_behavior_metric limit 10;`.
+
+## Workflow
+
+![Engineering workflow](assets/images/workflow.png)
 
 ## Stop
 
