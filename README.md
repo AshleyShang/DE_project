@@ -3,7 +3,7 @@
 ## Prereq
 
 1. [docker](https://docs.docker.com/get-docker/) (also make sure you have `docker-compose`) we will use this to run Airflow locally
-2. [pgcli](https://github.com/dbcli/pgcli) to connect to our databases(postgres and Redshift)
+2. [pgcli](https://github.com/dbcli/pgcli) to connect to the databases(postgres and Redshift)
 
 
 1. `aws cli` configured with keys and region
@@ -48,17 +48,13 @@ pgcli -h <your-redshift-host> -p 5439 -d <your-database> -U <your-redshift-user>
 # type password when prompted
 ```
 
-In the redshift connection run the script at `setup/redshift/create_external_schema.sql`, after replacing it with your `iam` role ARN and s3 bucket.
+In the redshift connection create tables as `setup/redshift/create_external_schema.sql`.
 
 log on to [www.localhost:8080](http://localhost:8080) to see the Airflow UI
-Create a new connection as shown below for your 'redshift'
+**Create a new connection 'redshift_conn'**
 
-![Airflow Redshift Connection](assets/images/airflow_rs_1.png)
-![Airflow Redshift Connection](assets/images/airflow_rs_2.png)
 
 ### EMR
-
-Get your EMR ID from the EMR UI, then in `dags/user_behaviour.py` fill out your `BUCKET_NAME` and `EMR_ID`.
 
 switch on your `DAG`, after running successfully, verify the presence of data in redshift using
 `select * from  public.user_behavior_metric limit 10;`.
