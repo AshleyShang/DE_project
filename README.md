@@ -1,16 +1,11 @@
-# Beginner DE Project - Batch Edition
-
-If you are interested in step by step explanation and review, check out the post for this repo at
-[project-for-beginners-batch-edition](https://www.startdataengineering.com/post/data-engineering-project-for-beginners-batch-edition)
+# DE Project
 
 ## Prereq
 
 1. [docker](https://docs.docker.com/get-docker/) (also make sure you have `docker-compose`) we will use this to run Airflow locally
 2. [pgcli](https://github.com/dbcli/pgcli) to connect to our databases(postgres and Redshift)
-3. [AWS account](https://aws.amazon.com/) to set up our cloud components
-4. [AWS Components](https://www.dropbox.com/s/ql8wxqjjcv42065/aws-components-setup.pdf?dl=0) to start the required services
+3. [AWS Components]
 
-By the end of the setup you should have(or know how to get)
 
 1. `aws cli` configured with keys and region
 2. `pem or ppk` file saved locally with correct permissions
@@ -47,7 +42,6 @@ and run the script at `setup/postgres/create_user_purchase.sql`.
 
 ### Redshift
 
-Get the redshift cluster connection details and make sure you have a spectrum IAM role associated with it(as shown in [AWS Components](https://www.dropbox.com/s/ql8wxqjjcv42065/aws-components-setup.pdf?dl=0) )
 log into redshift using `pgcli`
 
 ```bash
