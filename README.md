@@ -33,7 +33,7 @@
 
 ## Data
 
-Data is available at [data](https://www.dropbox.com/sh/amdyc6z8744hrl5/AAC2Fnbzb_nLhdT2nGjL7-7ta?dl=0).Place this folder within the `setup` folder as such `setup/raw_input_data/`
+Data is available at [data](https://www.dropbox.com/sh/amdyc6z8744hrl5/AAC2Fnbzb_nLhdT2nGjL7-7ta?dl=0).
 
 ## Setup and run
 
@@ -92,3 +92,9 @@ docker-compose -f docker-compose-LocalExecutor.yml down
 *Remember to create all the tables that are needed in Redshift (after connecting)*
 
 *Remember to set proper EMR master node inbound rules*
+
+## In my PySpark job
+
+In my spark job, I used `TextBlob` to label the sentiment polarity of the movie reviews, and based on that to train model and predict the sentiment. After data wrangling, I used Random Forest with 10-fold cross validation.
+
+
