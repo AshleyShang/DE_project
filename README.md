@@ -65,6 +65,7 @@ pgcli -h <your-redshift-host> -p 5439 -d <your-database> -U <your-redshift-user>
 In the redshift connection create tables as `setup/redshift/create_external_schema.sql`.
 
 log on to [www.localhost:8080](http://localhost:8080) to see the Airflow UI
+
 **Create a new connection 'redshift_conn'**
 
 
@@ -84,3 +85,10 @@ In you local terminal type within your project base directory
 ```bash
 docker-compose -f docker-compose-LocalExecutor.yml down
 ```
+## Some note
+
+*Remember to create schema and tables in PostgreSQL in advance before run the first task*
+
+*Remember to create all the tables that are needed in Redshift (after connecting)*
+
+*Remember to set proper EMR master node inbound rules*
