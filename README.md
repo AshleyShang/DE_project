@@ -1,5 +1,19 @@
 # DE Project
 
+## Tasks
+
+- load user purchase data into postgresql db and get filtered data into local file
+
+- deploy file onto S3 and remove local file
+
+- load review data in S3, also load spark script in S3
+
+- add EMR steps to EMR cluster
+
+- sense the completion of the last step
+
+- calculate statistics about user behavior within Redshift and get the output
+
 ## Prereq
 
 1. [docker](https://docs.docker.com/get-docker/) (also make sure you have `docker-compose`) we will use this to run Airflow locally
